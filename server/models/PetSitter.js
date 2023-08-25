@@ -1,9 +1,15 @@
 const mongoose = require('mongoose');
 
 const petSitterSchema = new mongoose.Schema({
-  CityId: String,
-  Name: String,
-  Lastname: String,
+  cityId: String,
+  name: String,
+  lastname: String,
+  email: String, 
+  password: String,
+  petType: {
+    type: String,
+    enum: ['perros', 'gatos', 'serpientes']
+  }
   
 });
 
