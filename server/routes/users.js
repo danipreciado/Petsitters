@@ -1,7 +1,8 @@
+const express = require('express');
+const usersRouter = express.Router();
+const { postUser } = require('../controller/Users.js');
 
-const { postUser } = require('../controller/Users.js')
 
-module.exports = (app, next) => {
+usersRouter.post('/', postUser);
 
-    app.post('/users', postUser);
-}
+module.exports = usersRouter;
