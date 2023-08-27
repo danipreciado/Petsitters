@@ -1,0 +1,56 @@
+.signUp__Container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-family: Palanquin;
+}
+.signUp__FormAside{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-items: center;
+}
+.signUp__Form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+}
+
+.signUp__Title{
+    font-family: Lilita One;
+    color: #8A2ED2;
+    font-size: 1.8rem;
+}
+
+.signUp__Input{
+    border-radius: 20px;
+    width: 25vw;
+    border: 2px solid #8A2ED2;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.signUp__InputLabel{
+    font-size: 1rem;
+}
+
+.signUp__Button{
+    border: none;
+    font-family: Palanquin;
+    font-weight: 600;
+    font-size: 1rem;
+    width: 15vw;
+    padding: 1rem;
+    border-radius: 15px;
+    color: white;
+    background-color: #8A2ED2;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.signUp__ImgAside{
+    margin-top: 2rem;
+}

@@ -10,13 +10,11 @@ const petSitterSchema = new mongoose.Schema({
   photoURL: String,
   cellphone: Number,
   email: String, 
-  age: Number
-/*   petsType: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'PetsType',
-    },
-  ],   */
+  age: Number,
+  petsType: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'PetsType',
+  }],
 });
 
 const PetSitter = mongoose.model('PetSitter', petSitterSchema);
