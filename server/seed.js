@@ -3,6 +3,8 @@ const PetSitter = require('./models/petSitter');
 const Review = require('./models/Review');
 const User = require('./models/User');
 const City = require('./models/City');
+const PetsType = require('./models/PetsType');
+
 
 async function seedDatabase() {
     try {
@@ -113,9 +115,11 @@ async function seedDatabase() {
 
         if (usersCount === 0 && petSittersCount === 0 && reviewsCount === 0) {
             const cities = await City.find();
+            const petTypes = await PetsType.find();
             const petsittersWithCityIds = petSitters.map((petSitter, index) => ({
                 ...petSitter,
                 cityId: cities[index % cities.length]._id,
+                petsType: petTypes[index % petTypes.length]._id,
             }));
 
             const createdUsers = await User.insertMany(users);
