@@ -3,6 +3,7 @@ const cors = require('cors');
 const { connect } = require('./connect');
 const createCitiesAndStates = require('./createCitiesAndStates');
 const createPetsTypes = require('./createPetsType');
+const seedDatabase = require('./seed');
 const authMiddleware = require('./middleware/auth');
 
 const petSittersRouter = require('./routes/petsitters');
@@ -30,6 +31,7 @@ app.use('/reviews', reviewsRouter);
 
 createCitiesAndStates();
 createPetsTypes();
+seedDatabase();
 
 app.listen(port, () => {
   console.info(`App listening on port ${port}`);
