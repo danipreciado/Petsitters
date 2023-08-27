@@ -3,8 +3,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const config = require('../config');
 const User = require('../models/User');
-const PetSitter = require('../models/petSitter'); //ver por que no me acepta PetSitter
-
+const PetSitter = require('../models/petSitter');
 const loginRouter = express.Router();
 
 const { secret } = config;
@@ -42,7 +41,7 @@ loginRouter.post('/', async (req, resp, next) => {
       );
 
       resp.status(200);
-      return resp.json({ token, userType: 'petSitter' });
+      return resp.json({ token });
     }
   }
 
@@ -64,7 +63,7 @@ loginRouter.post('/', async (req, resp, next) => {
     );
 
     resp.status(200);
-    return resp.json({ token, userType: 'user' });
+    return resp.json({ token});
   }
 
   return next(404);

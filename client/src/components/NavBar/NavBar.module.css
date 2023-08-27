@@ -20,17 +20,16 @@
 .navBar__logoContainer img{
     height: 15vh;
 }
-
 .navBar__linksContainer{
+    
     display: flex;
-    width: 60vw;
+   width: 60vw; 
     justify-content: space-around;
     align-items: center;
     font-size: 1.5rem;
     
     
 }
-
 .navBar__loginButton{
     border: none;
     font-family: Palanquin;

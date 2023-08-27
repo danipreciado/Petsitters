@@ -8,6 +8,7 @@ function Login() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
 
   const handleLogin = async () => {
     try {
@@ -25,7 +26,7 @@ function Login() {
        
         navigate('/');
       } else {
-        console.error('Error al iniciar sesión');
+        setError('Verifique su correo electrónico o contraseña');
       }
     } catch (error) {
       console.error('Error al enviar la solicitud', error);
@@ -40,6 +41,7 @@ function Login() {
       <h2 className={styles.login__Subtitle}>
         Ingresa tus credenciales de acceso
       </h2>
+      {error && <p className={styles.login__Error}>{error}</p>} 
       <form className={styles.login__Form}>
         <label htmlFor='email' className={styles.login__InputLabel}>Correo Electrónico</label>
         <input
