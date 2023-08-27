@@ -1,0 +1,13 @@
+.cards__card{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cards__container{
+    margin-top: 2rem;
+    text-align: center;
+    font-family: Palanquin;
+    color:#8A2ED2;
+}

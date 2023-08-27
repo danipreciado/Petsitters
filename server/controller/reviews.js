@@ -3,12 +3,12 @@ const Review = require('../models/Review');
 module.exports = {
     postReview: async (req, res, next) => {
         try {
-            const { petSitterId, rating, comment } = req.body;
+            const { petSitterId, rating, comments } = req.body;
 
             const newReview = new Review({
                 petSitterId,
                 rating,
-                comment,
+                comments,
             });
 
             const savedReview = await newReview.save();

@@ -1,11 +1,18 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PetSitterCard from '../PetSitterCard/PetSitterCard';
 import NavBar from '../NavBar/NavBar';
+import styles from './PetSittersView.module.css'
 
 
 
 function PetSittersView() {
+  const navigate = useNavigate();
 
+  const handleCardClick = (petSitterId) => {
+    
+    navigate(`/${petSitterId}`);
+  };
     const [petsitters, setPetsitters] = useState([]);
 
     useEffect(() => {
@@ -23,11 +30,11 @@ function PetSittersView() {
   return (
     <>
         <NavBar />
-        <div className="App">
-      <h1>Listado de Cuidadores de Mascotas</h1>
-      <div className="card-container">
+        <div className={styles.cards__container} >
+      <h1>Encuentra a tu Cuidador Ideal</h1>
+      <div className={styles.cards__card}>
         {petsitters.map((petsitter) => (
-          <PetSitterCard key={petsitter._id} petsitter={petsitter} />
+          <PetSitterCard onClick={() => handleCardClick(petsitter._id)} key={petsitter._id} petsitter={petsitter} />
         ))}
       </div>
     </div>

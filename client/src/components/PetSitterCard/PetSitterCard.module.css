@@ -1,0 +1,31 @@
+.card__container {
+    width: 15vw;
+    border-radius: 20px;
+    border: 2px solid #8A2ED2;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: Palanquin;
+    padding: 1rem;
+    
+}
+
+.card__img{
+    width: 10vw;
+    border-radius: 5vw;
+}
+
+.card__name{
+    color:#8A2ED2;
+}
+
+.card__location{
+    color: rgba(138, 46, 210, 0.80);
+}
+
+.card__rating{
+    margin-left: 8vw;
+}
+

@@ -3,6 +3,7 @@ import HomeView from './components/HomeView/HomeView';
 import LoginView from './components/LoginView/LoginView';
 import SignUpView from './components/SignUpView/SignUpView';
 import PetSittersView from './components/PetSittersView/PetSittersView';
+import PetSitterProfile from './components/PetSitterProfile/PetSitterProfile';
 
 function App () {
   return (
@@ -12,6 +13,8 @@ function App () {
         <Route path='/login' element={<LoginView />} />
         <Route path='/signup' element={<SignUpView />} />
         <Route path='/petsitters' element={<PetSittersView />} />
+        <Route path="/:id" element={<PetSitterProfile />} />
+
         
       </Routes>
       
