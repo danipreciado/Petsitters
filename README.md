@@ -3,6 +3,9 @@
 
 Bienvenido al proyecto de PetSitters. En este proyecto, hemos creado una plataforma para conectar cuidadores de mascotas con los dueños de mascotas que necesitan servicios de cuidado. Sigue las instrucciones a continuación para configurar y correr el proyecto en tu máquina local.
 
+
+![ezgif-4-8f43602f0d](https://github.com/danipreciado/Petsitters/assets/127158155/9327ee53-efc2-453b-b243-898e690a42aa)
+
 ## Instrucciones de Instalación
 
 **Clonar el repositorio:**
@@ -33,6 +36,8 @@ Este es uno de los usuarios con los que se pude iniciar sesión:
 
 `
 Correo: dani@gmail.com
+`
+`
 Contraseña: 123456
 `
 
