@@ -27,11 +27,15 @@ npm install
 Asegurarse de tener una base de datos MongoDB configurada y en ejecución. Puedes configurar la conexión en el archivo `config.js` o mediante variables de entorno.
 
 2. **Agregando Datos Iniciales:**
-Para poblar la base de datos con datos iniciales de ejemplo, ejecuta el siguiente comando:
+Al iniciar el servidor se agregarán datos iniciales, con el archivo seed.js.
 
-```
-npm run seed
-```
+Este es uno de los usuarios con los que se pude iniciar sesión: 
+
+`
+Correo: dani@gmail.com
+Contraseña: 123456
+`
+
 ## Instrucciones para Correr el Proyecto
 
 1. **Iniciar el Servidor:**
