@@ -1,10 +1,10 @@
 import styles from './NavBar.module.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link} from 'react-router-dom';
 
 function NavBar() {
     const navigate = useNavigate();
 
-    const isLoggedIn = !!localStorage.getItem('token'); // Verificar si hay un token
+    const isLoggedIn = !!localStorage.getItem('token');
 
     const handleLogout = () => {
         localStorage.removeItem('token');
@@ -13,12 +13,16 @@ function NavBar() {
     };
 
     const handleLogin = () => {
-        navigate('/login'); // Navega a la ruta de inicio de sesión
+        navigate('/login');
     };
 
-    const handleNavigateHome = () => {
-        navigate('/'); // Navega a la ruta de inicio de sesión
+  /*   const handleNavigateHome = () => {
+        navigate('/'); 
     };
+
+    const handleNavigatePetsitters = () => {
+        navigate('/petsitters');
+    }; */
 
 
 
@@ -31,9 +35,9 @@ function NavBar() {
             </section>
             
             <section className={styles.navBar__linksContainer}>
-                <a className={styles.navBar__links} onClick={handleNavigateHome}>Inicio</a>
-                <a className={styles.navBar__links} href="#">Encuentra un cuidador</a>
-                {isLoggedIn ? ( // Mostrar el icono de cierre de sesión si el usuario está autenticado
+            <Link className={styles.navBar__links} to="/">Inicio</Link>
+            <Link className={styles.navBar__links} to="/petsitters">Encuentra un cuidador</Link>
+                {isLoggedIn ? ( 
                  <img className={styles.navBar__logoutButton} onClick={handleLogout} src="logoutIcon.png" alt="logout">
                 </img>
                 ) : (

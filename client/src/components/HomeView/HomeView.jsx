@@ -1,4 +1,3 @@
-/* import styles from './HomeView.module.css'; */
 import NavBar from '../NavBar/NavBar';
 import WelcomeMessage from '../WelcomeMessage/WelcomeMessage';
 

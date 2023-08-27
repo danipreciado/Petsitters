@@ -1,0 +1,90 @@
+.profile__container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 2rem;
+    font-family: Palanquin;
+}
+
+.profile__card {
+    border-radius: 20px;
+    background: rgba(205, 149, 249, 0.50);
+    width: 20vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.profile__pic{
+    
+    height: 30vh;
+    border-radius: 12.5vw;
+}
+
+.profile__typeImg{
+    width: 5vw;
+}
+
+.profile__name{
+    font-family: Lilita One;
+    font-size: 2rem;
+    color: #8A2ED2;
+}
+
+.profile__details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    gap: 2rem;
+}
+
+.profile__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile__detail{
+    display: flex;
+    align-items: center;
+}
+
+.profile__review{
+    border-radius: 20px;
+    border: 1px solid #8A2ED2;
+    background: #FFF;
+    width: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 20vh;
+}
+
+.profile__reviewsIconContainer{
+    display: flex;
+    justify-content: flex-start;
+    width: 40vw;
+}
+
+.profile__reviewsRatingContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 40vw;
+    color:#8A2ED2;
+}
+
+.profile__card__rating{
+    color:#8A2ED2;
+    font-size: 2rem;
+    display: flex;
+    width: 10vw;
+    justify-content: center;
+    align-items: center;
+}

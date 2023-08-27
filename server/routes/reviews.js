@@ -5,6 +5,6 @@ const { getReview, postReview } = require('../controller/reviews.js');
 
 reviewsRouter.post('/', postReview);
 
-reviewsRouter.get(':id', getReview)
+reviewsRouter.get('/:petSitterId', getReview)
 
 module.exports = reviewsRouter;
