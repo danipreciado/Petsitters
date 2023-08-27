@@ -1,9 +1,32 @@
-const PetSitter = require('../models/petSitter');
+const PetSitter = require('../models/PetSitter');
 const City = require('../models/City');
+const State = require('../models/State');
+const Review = require('../models/Review');
+const PetsType = require('../models/PetsType');
 
 function isEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
+}
+
+async function calculateAverageRating(petSitterId) {
+  try {
+    const reviews = await Review.find({ petSitterId });
+
+    if (reviews.length === 0) {
+      return 0;
+    }
+
+    const totalRatings = reviews.reduce((total, review) => total + review.rating, 0);
+    const averageRating = totalRatings / reviews.length;
+
+    const roundedAverage = parseFloat(averageRating.toFixed(2));
+
+    return roundedAverage;
+  } catch (error) {
+    console.error('Error calculating average rating:', error);
+    return 0;
+  }
 }
 
 module.exports = {
@@ -82,15 +105,39 @@ module.exports = {
   },
 
   getPetSitters: async (req, resp, next) => {
-    console.log('entra aqui');
     try {
-      const petSitters = await PetSitter.find();
-      resp.json(petSitters);
+      const petSittersWithCities = await PetSitter.find().populate('cityId');
+      const petSittersWithAverageRating = await Promise.all(
+        petSittersWithCities.map(async (petSitter) => {
+          const averageRating = await calculateAverageRating(petSitter._id);
+          return {
+            ...petSitter.toObject(),
+            averageRating,
+          };
+        })
+      );
+  
+      const petSittersWithFullInfo = await Promise.all(
+        petSittersWithAverageRating.map(async (petSitter) => {
+          const city = petSitter.cityId;
+    
+         const state = await State.findOne({ _id: city.stateId });
+  
+          return {
+            ...petSitter,
+            city: city.name,
+            state: state.name,
+          };
+        })
+      );
+  
+      resp.json(petSittersWithFullInfo);
     } catch (error) {
       next(error);
     }
-
   },
+  
+  //PetsType
 
 
 
