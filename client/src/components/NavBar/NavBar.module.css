@@ -49,6 +49,17 @@
     cursor: pointer;
 }
 
+.navBar__links:hover{
+    
+    color: #6d1ea0;
+    
+}
+
 .navBar__logoutButton{
     cursor: pointer;
+}
+
+.navBar__loginButton:hover {
+    background-color: #6d1ea0; 
+    transform: scale(1.05); 
 }

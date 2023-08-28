@@ -16,15 +16,6 @@ function NavBar() {
         navigate('/login');
     };
 
-  /*   const handleNavigateHome = () => {
-        navigate('/'); 
-    };
-
-    const handleNavigatePetsitters = () => {
-        navigate('/petsitters');
-    }; */
-
-
 
     return (
         <nav className={styles.navBar}>

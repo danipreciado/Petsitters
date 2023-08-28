@@ -54,3 +54,8 @@
 .signUp__ImgAside{
     margin-top: 2rem;
 }
+
+.signUp__Button:hover {
+    background-color: #6d1ea0; 
+    transform: scale(1.05); 
+}
