@@ -1,5 +1,7 @@
 import NavBar from '../NavBar/NavBar';
 import WelcomeMessage from '../WelcomeMessage/WelcomeMessage';
+import FAQ from '../FAQ/FAQ';
+import ReviewsHome from '../ReviewsHome/ReviewsHome';
 
 function HomeView() {
 
@@ -7,6 +9,9 @@ function HomeView() {
         <>
             <NavBar />
             <WelcomeMessage />
+            <ReviewsHome />
+            <FAQ />
+            
         </>
     )
 }
