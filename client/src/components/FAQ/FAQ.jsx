@@ -37,13 +37,14 @@ function FAQ() {
       <ul className={styles.faqList}>
         {questions.map((q, index) => (
           <li key={index} className={styles.faqItem}>
+           
             <button
               className={`${styles.faqQuestion} ${
                 activeIndex === index ? styles.active : ''
               }`}
               onClick={() => handleQuestionClick(index)}
             >
-              {q.question}
+               <img src='pawIcon.png' className={styles.faqIcon}></img> {q.question}
             </button>
             {activeIndex === index && (
               <div className={styles.faqAnswer}>{q.answer}</div>

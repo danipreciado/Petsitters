@@ -52,8 +52,8 @@ function PetSitterProfile() {
                 <section className={styles.profile__info}>
                     <h1 className={styles.profile__name}>{petSitter.name} {petSitter.lastname}</h1>
                     <div className={styles.profile__details}>
-                        <p className={styles.profile__detail}><img src='../ageIcon.png'></img> Edad {petSitter.age}</p>
-                        <p className={styles.profile__detail}><img src='../locationIcon.png'></img> Locación {petSitter.city}, {petSitter.state}</p>
+                        <p className={styles.profile__detail}><img src='../ageIcon.png'></img> Edad: {petSitter.age}</p>
+                        <p className={styles.profile__detail}><img src='../locationIcon.png'></img> Locación: {petSitter.city}, {petSitter.state}</p>
                     </div>
 
                     <article className={styles.profile__reviewsContainer}>
